@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 type Props = {
   query: string;
@@ -49,7 +50,10 @@ export const TodoFilter: React.FC<Props> = ({
         </span>
 
         {query && (
-          <span className="icon is-right" style={{ pointerEvents: 'all' }}>
+          <span
+            className={classNames('icon is-right')}
+            style={{ pointerEvents: 'all' }}
+          >
             {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
             <button
               data-cy="clearSearchButton"
